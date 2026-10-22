@@ -1,0 +1,15 @@
+# Черновики и исходники фото остаются только на компьютере
+variants/
+images/*
+!images/bedroom-2.jpg
+!images/jacuzzi.jpg
+!images/lounge-2.jpg
+!images/lounge.jpg
+!images/pool-2.jpg
+!images/pool-blue.jpg
+!images/pool-red.jpg
+!images/pool.jpg
+!images/sauna-2.jpg
+!images/sauna.jpg
+!images/waterfall-hd.jpg
+.DS_Store
