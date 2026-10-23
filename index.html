@@ -4,14 +4,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Сауна «Русалка» в Хабаровске: бассейн, финская парная, круглосуточно</title>
-<meta name="description" content="Сауна «Русалка» в Хабаровске, Строительная, 9. Финская парная, тёплый бассейн с подсветкой, водопадом и джакузи, караоке. До 6 гостей. От 1500 ₽ в час, круглосуточно по записи: +7 4212 35-84-40, +7 914 772-31-78.">
+<meta name="description" content="Сауна «Русалка» в Хабаровске, Строительная, 9. Финская парная, тёплый бассейн с подсветкой, водопадом и джакузи, караоке. До 10 гостей. От 1500 ₽ в час, круглосуточно по записи: +7 4212 35-84-40, +7 914 772-31-78.">
 <meta name="theme-color" content="#03181c">
 <meta name="color-scheme" content="dark">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="ru_RU">
 <meta property="og:site_name" content="Сауна «Русалка»">
 <meta property="og:title" content="Сауна «Русалка» в Хабаровске">
-<meta property="og:description" content="Из жаркой финской парной сразу в тёплый бассейн с подсветкой, водопадом и джакузи. До 6 гостей, от 1500 ₽ в час, круглосуточно по записи.">
+<meta property="og:description" content="Из жаркой финской парной сразу в тёплый бассейн с подсветкой, водопадом и джакузи. До 10 гостей, от 1500 ₽ в час, круглосуточно по записи.">
 <!-- Когда появятся фото и адрес сайта: добавить og:image и og:url -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,7 +21,7 @@
   "@context": "https://schema.org",
   "@type": "DaySpa",
   "name": "Сауна «Русалка»",
-  "description": "Сауна с финской парной и бассейном с подогревом и подсветкой: фонтан, гейзер, водопад, гидромассаж, джакузи. Караоке-зона, массажное кресло, Wi-Fi. До 6 гостей.",
+  "description": "Сауна с финской парной и бассейном с подогревом и подсветкой: фонтан, гейзер, водопад, гидромассаж, джакузи. Караоке-зона, массажное кресло, Wi-Fi. До 10 гостей.",
   "telephone": ["+7 4212 35-84-40", "+7 914 772-31-78"],
   "address": {
     "@type": "PostalAddress",
@@ -39,7 +39,7 @@
   "priceRange": "1500–1800 ₽ в час",
   "currenciesAccepted": "RUB",
   "paymentAccepted": "Банковская карта",
-  "maximumAttendeeCapacity": 6,
+  "maximumAttendeeCapacity": 10,
   "amenityFeature": [
     {"@type":"LocationFeatureSpecification","name":"Финская парная","value":true},
     {"@type":"LocationFeatureSpecification","name":"Бассейн с подогревом и подсветкой","value":true},
@@ -300,6 +300,17 @@ h1,h2,h3{font-weight:500;margin:0}
 .bignum small{font-size:.32em;letter-spacing:0;color:var(--soft);margin-left:.2em}
 .calc{border-radius:36px;background:var(--sea);padding:36px}
 .calc h3{font-family:"Manrope",sans-serif;font-weight:600;font-size:20px;margin:0 0 20px}
+.guests{max-width:460px;margin:0 0 20px;padding:18px 20px;border-radius:18px;background:rgba(3,24,28,.5);box-shadow:inset 0 0 0 1px rgba(159,243,226,.12)}
+.guests-row{display:flex;gap:6px;margin-bottom:12px}
+.guests-row svg{width:26px;height:auto;flex:none}
+.guests-row .in{fill:var(--pearl);stroke:none}
+.guests-row .extra{fill:none;stroke:var(--pearl);stroke-width:1.6;stroke-dasharray:3 2.4;opacity:.75}
+.guests-row .extra:first-of-type{margin-left:10px}
+.guests-legend{display:flex;justify-content:space-between;gap:6px 16px;flex-wrap:wrap;font-size:15px;line-height:1.35;color:var(--soft)}
+.guests-legend b{color:var(--ink)}
+.guests-legend .g-extra{text-align:right}
+.guests-ex{margin:12px 0 0;padding-top:12px;border-top:1px solid rgba(159,243,226,.15);font-size:15px;color:var(--soft)}
+.guests-ex b{color:var(--pearl);white-space:nowrap}
 .calc-text{margin:0 0 28px;font-size:18px;line-height:1.55}
 .tariffs{list-style:none;margin:0 0 20px;padding:0;display:grid;gap:10px;max-width:460px}
 .tariffs li{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:14px 20px;border-radius:18px;background:rgba(10,77,82,.45)}
@@ -504,6 +515,9 @@ h1,h2,h3{font-weight:500;margin:0}
   .foot{margin-top:96px;padding-bottom:110px}
 }
 @media (max-width:560px){
+  .guests-row svg{width:21px}
+  .guests-row{gap:4px}
+  .guests-legend .g-extra{text-align:left}
   .hero-info{grid-template-columns:1fr;gap:12px}
   .cta .btn,.contact-actions .btn,.book-cta .btn{flex:1 1 100%}
 }
@@ -642,7 +656,7 @@ h1,h2,h3{font-weight:500;margin:0}
         <a class="btn btn--main" href="tel:+74212358440" data-call>Позвонить</a>
         <a class="btn btn--alt" href="https://yandex.ru/maps/org/rusalka/122112668871/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 11 18-8-8 18-2-8-8-2Z"/></svg>Построить маршрут</a>
       </div>
-      <p class="lead">Финская парная и тёплый бассейн с подсветкой, водопадом и джакузи. Своя компания до 6 человек.</p>
+      <p class="lead">Финская парная и тёплый бассейн с подсветкой, водопадом и джакузи. Своя компания до 10 человек.</p>
       <div class="hero-meta">
         <p class="now" id="now"><span class="now-dot" aria-hidden="true"></span><span id="now-text">Хабаровск · открыто круглосуточно</span></p>
         <button class="sound" type="button" aria-pressed="false" aria-label="Включить звук воды">
@@ -686,7 +700,7 @@ h1,h2,h3{font-weight:500;margin:0}
     <ul class="wrap">
       <li class="caustic" data-rv style="--i:0"><b>от 1500 ₽</b><span>час аренды, будни днём</span></li>
       <li class="caustic" data-rv style="--i:1"><b>24 часа</b><span>открыто круглосуточно, по записи</span></li>
-      <li class="caustic" data-rv style="--i:2"><b>до 6</b><span>гостей в одной компании</span></li>
+      <li class="caustic" data-rv style="--i:2"><b>до 10</b><span>гостей, 6 из них уже в цене</span></li>
       <li class="caustic" data-rv style="--i:3"><b>Бассейн</b><span>с водопадом, джакузи и подсветкой</span></li>
     </ul>
   </section>
@@ -756,7 +770,7 @@ h1,h2,h3{font-weight:500;margin:0}
     <div class="wrap rest-grid">
       <div>
         <h2 class="h2" id="rest-title" data-rv>Между заходами — свой вечер</h2>
-        <p class="lead" data-rv style="--i:1">Отдышались после парной, обсохли — и можно петь, болтать и есть своё. Приезжайте семьёй или компанией друзей, до 6 человек.</p>
+        <p class="lead" data-rv style="--i:1">Отдышались после парной, обсохли — и можно петь, болтать и есть своё. Приезжайте семьёй или компанией друзей, до 10 человек.</p>
         <ul class="rows">
           <li data-rv style="--i:0"><h3>Караоке</h3><p>Та самая песня, которую вся компания знает наизусть. Микрофон по кругу.</p></li>
           <li data-rv style="--i:1"><h3>Массажное кресло</h3><p>Пока все в бассейне, кто-то обязательно займёт его первым.</p></li>
@@ -845,6 +859,11 @@ h1,h2,h3{font-weight:500;margin:0}
           <li><span>Будни, 10:00–14:00</span><b>1500 ₽<small>/час</small></b></li>
           <li><span>Всё остальное время</span><b>1800 ₽<small>/час</small></b></li>
         </ul>
+        <div class="guests" data-rv style="--i:2">
+          <div class="guests-row" aria-hidden="true"><svg class="in" viewBox="0 0 24 32"><circle cx="12" cy="8" r="6"/><path d="M2 31c0-7 4.5-12 10-12s10 5 10 12"/></svg><svg class="in" viewBox="0 0 24 32"><circle cx="12" cy="8" r="6"/><path d="M2 31c0-7 4.5-12 10-12s10 5 10 12"/></svg><svg class="in" viewBox="0 0 24 32"><circle cx="12" cy="8" r="6"/><path d="M2 31c0-7 4.5-12 10-12s10 5 10 12"/></svg><svg class="in" viewBox="0 0 24 32"><circle cx="12" cy="8" r="6"/><path d="M2 31c0-7 4.5-12 10-12s10 5 10 12"/></svg><svg class="in" viewBox="0 0 24 32"><circle cx="12" cy="8" r="6"/><path d="M2 31c0-7 4.5-12 10-12s10 5 10 12"/></svg><svg class="in" viewBox="0 0 24 32"><circle cx="12" cy="8" r="6"/><path d="M2 31c0-7 4.5-12 10-12s10 5 10 12"/></svg><svg class="extra" viewBox="0 0 24 32"><circle cx="12" cy="8" r="6"/><path d="M2 31c0-7 4.5-12 10-12s10 5 10 12"/></svg><svg class="extra" viewBox="0 0 24 32"><circle cx="12" cy="8" r="6"/><path d="M2 31c0-7 4.5-12 10-12s10 5 10 12"/></svg><svg class="extra" viewBox="0 0 24 32"><circle cx="12" cy="8" r="6"/><path d="M2 31c0-7 4.5-12 10-12s10 5 10 12"/></svg><svg class="extra" viewBox="0 0 24 32"><circle cx="12" cy="8" r="6"/><path d="M2 31c0-7 4.5-12 10-12s10 5 10 12"/></svg></div>
+          <div class="guests-legend"><span><b>6 гостей</b> уже в цене</span><span class="g-extra"><b>+200 ₽/час</b> за каждого следующего, до 10</span></div>
+          <p class="guests-ex">Например, 8 человек в будни днём: 1500 + 2 × 200 = <b>1900 ₽ в час</b></p>
+        </div>
         <p class="note" data-rv style="--i:2">Можно оплатить картой.</p>
       </div>
       <div class="calc caustic" data-rv="scale" style="--i:1">
@@ -880,7 +899,7 @@ h1,h2,h3{font-weight:500;margin:0}
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>
           +7 914 772-31-78
         </a>
-        <p class="note">До 6 гостей в одной компании. Свою еду и напитки можно взять с собой.</p>
+        <p class="note">До 10 гостей: 6 уже в цене, за каждого следующего — 200 ₽ в час. Свою еду и напитки можно взять с собой.</p>
       </div>
     </div>
   </section>
@@ -895,7 +914,7 @@ h1,h2,h3{font-weight:500;margin:0}
       </div>
       <div class="qa">
         <details data-rv style="--i:0"><summary>Можно прийти со своей едой и напитками?</summary><p>Да, берите с собой всё, что любите.</p></details>
-        <details data-rv style="--i:1"><summary>Сколько человек поместится?</summary><p>До 6 человек. Подойдёт и для семейного вечера, и для компании друзей.</p></details>
+        <details data-rv style="--i:1"><summary>Сколько человек поместится?</summary><p>До 10 человек. В цену часа уже входят 6 гостей, за каждого следующего — 200 ₽ в час. Например, 8 человек в будни днём: 1500 + 2 × 200 = 1900 ₽ в час.</p></details>
         <details data-rv style="--i:2"><summary>Сколько стоит?</summary><p>В будни с 10:00 до 14:00 — 1500 ₽ в час. Всё остальное время, вечером, ночью и в выходные — 1800 ₽ в час.</p></details>
         <details data-rv style="--i:3"><summary>Можно оплатить картой?</summary><p>Да, оплата картой есть.</p></details>
         <details data-rv style="--i:4"><summary>Когда вы работаете?</summary><p>Круглосуточно, по предварительной записи. Позвоните и договоритесь о времени.</p></details>
