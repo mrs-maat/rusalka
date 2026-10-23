@@ -199,6 +199,7 @@ h1,h2,h3{font-weight:500;margin:0}
 .facts li{padding:28px 24px;border-radius:var(--r-card);background:var(--sea)}
 .facts b{display:block;font-family:"Cormorant",serif;font-weight:600;font-size:clamp(40px,4.4vw,60px);line-height:1;letter-spacing:-.02em;margin-bottom:10px;color:var(--pearl);white-space:nowrap}
 .facts span{display:block;font-size:16px;line-height:1.4}
+.facts .fact-price b{font-size:clamp(30px,3.1vw,44px);line-height:1.36}
 
 /* ---------- места под фото ----------
    Чтобы вставить фото: положите <img src="..." alt="..."> внутрь <figure class="ph">.
@@ -310,7 +311,9 @@ h1,h2,h3{font-weight:500;margin:0}
 .nw{white-space:nowrap}
 .t-unit{font-size:15px;color:var(--soft);margin-top:4px}
 .guests{max-width:520px;margin:0 0 20px;padding:20px 20px 16px;border-radius:18px;background:rgba(3,24,28,.5);box-shadow:inset 0 0 0 1px rgba(159,243,226,.12)}
-.g-title{margin:0 0 10px;font-size:15px;font-weight:700;color:var(--ink)}
+.g-line{margin:0;font-size:18px;line-height:1.45}
+.g-line b{color:var(--pearl)}
+.g-line--plus b{color:var(--heat)}
 .guests-row{display:flex;gap:6px;margin-bottom:10px}
 .guests-row svg{width:26px;height:auto;flex:none}
 .guests-row .in{fill:var(--pearl);stroke:none}
@@ -483,6 +486,8 @@ h1,h2,h3{font-weight:500;margin:0}
   .tail-wrap{position:absolute;right:-30px;top:40px;width:180px;opacity:.5;z-index:-1}
   .facts ul{gap:10px}
   .facts li{padding:20px 18px;border-radius:22px}
+  .facts .fact-price,.facts .fact-pool{grid-column:span 2}
+  .facts .fact-price b{font-size:40px;line-height:1}
   .split,.steam .split{grid-template-columns:1fr;gap:40px}
   .water .ph,.steam .ph{justify-self:stretch;max-width:none;aspect-ratio:1/1}
   .steam .ph{order:-1}
@@ -715,10 +720,10 @@ h1,h2,h3{font-weight:500;margin:0}
   <!-- ===== 2. Факты ===== -->
   <section class="facts" aria-label="Коротко о сауне">
     <ul class="wrap">
-      <li class="caustic" data-rv style="--i:0"><b>1500–1800 ₽</b><span>час аренды: днём в будни дешевле</span></li>
+      <li class="caustic fact-price" data-rv style="--i:0"><b>1500–1800 ₽</b><span>час аренды: днём в будни дешевле</span></li>
       <li class="caustic" data-rv style="--i:1"><b>24 часа</b><span>открыто круглосуточно, по записи</span></li>
       <li class="caustic" data-rv style="--i:2"><b>до 10</b><span>гостей, 6 из них уже в цене</span></li>
-      <li class="caustic" data-rv style="--i:3"><b>Бассейн</b><span>с водопадом, джакузи и подсветкой</span></li>
+      <li class="caustic fact-pool" data-rv style="--i:3"><b>Бассейн</b><span>с водопадом, джакузи и подсветкой</span></li>
     </ul>
   </section>
 
@@ -850,13 +855,8 @@ h1,h2,h3{font-weight:500;margin:0}
         </div>
         <div class="guests" data-rv style="--i:2">
           <div class="guests-row" aria-hidden="true"><svg class="in" viewBox="0 0 24 32"><circle cx="12" cy="8" r="6"/><path d="M2 31c0-7 4.5-12 10-12s10 5 10 12"/></svg><svg class="in" viewBox="0 0 24 32"><circle cx="12" cy="8" r="6"/><path d="M2 31c0-7 4.5-12 10-12s10 5 10 12"/></svg><svg class="in" viewBox="0 0 24 32"><circle cx="12" cy="8" r="6"/><path d="M2 31c0-7 4.5-12 10-12s10 5 10 12"/></svg><svg class="in" viewBox="0 0 24 32"><circle cx="12" cy="8" r="6"/><path d="M2 31c0-7 4.5-12 10-12s10 5 10 12"/></svg><svg class="in" viewBox="0 0 24 32"><circle cx="12" cy="8" r="6"/><path d="M2 31c0-7 4.5-12 10-12s10 5 10 12"/></svg><svg class="in" viewBox="0 0 24 32"><circle cx="12" cy="8" r="6"/><path d="M2 31c0-7 4.5-12 10-12s10 5 10 12"/></svg><svg class="plus" viewBox="0 0 24 32"><circle cx="12" cy="8" r="6"/><path d="M2 31c0-7 4.5-12 10-12s10 5 10 12"/></svg><svg class="plus" viewBox="0 0 24 32"><circle cx="12" cy="8" r="6"/><path d="M2 31c0-7 4.5-12 10-12s10 5 10 12"/></svg><svg class="plus" viewBox="0 0 24 32"><circle cx="12" cy="8" r="6"/><path d="M2 31c0-7 4.5-12 10-12s10 5 10 12"/></svg><svg class="plus" viewBox="0 0 24 32"><circle cx="12" cy="8" r="6"/><path d="M2 31c0-7 4.5-12 10-12s10 5 10 12"/></svg></div>
-          <div class="guests-legend"><span><b>6 гостей</b> — уже в цене</span><span class="g-plus"><b>7-й, 8-й, 9-й, 10-й</b> — +200 ₽ в час за каждого</span></div>
-          <p class="g-title">Как считается:</p>
-          <dl class="receipt">
-            <div><dt>Аренда сауны</dt><dd>цена часа (1500 или 1800 ₽) × сколько часов</dd></div>
-            <div><dt>Доплата за гостей</dt><dd>200 ₽ × сколько гостей сверх шести × сколько часов</dd></div>
-          </dl>
-          <p class="g-note">Если вас 6 или меньше — платите только аренду.</p>
+          <p class="g-line"><b>6 гостей</b> — уже в цене</p>
+          <p class="g-line g-line--plus"><b>Каждый следующий</b> — <span class="nw">+200 ₽ в час</span></p>
         </div>
         <p class="note" data-rv style="--i:2">Можно оплатить картой.</p>
       </div>
