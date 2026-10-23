@@ -164,7 +164,9 @@ h1,h2,h3{font-weight:500;margin:0}
 .js .h1-word{clip-path:inset(-20% 100% -20% 0);animation:write 2.2s cubic-bezier(.45,0,.2,1) .2s forwards,shimmer 9s linear infinite}
 @keyframes write{to{clip-path:inset(-20% -10% -20% 0)}}
 @keyframes rise{to{opacity:1;transform:none}}
-.h1-sub{display:block;font-family:"Manrope",sans-serif;font-size:clamp(18px,1.9vw,22px);font-weight:600;letter-spacing:0;line-height:1.3;text-shadow:none;margin-top:18px;color:var(--soft)}
+.h1-lock{display:inline-grid;justify-items:start}
+.h1-pre{justify-self:end;margin:0 .5em -4px 0;font:600 clamp(13px,1.15vw,16px)/1 "Manrope",sans-serif;letter-spacing:.45em;text-transform:uppercase;color:var(--pearl);padding:6px 0 6px 14px;border-left:1px solid rgba(159,243,226,.5)}
+.h1-sub{justify-self:end;margin:-.1em .3em 0 0;font:italic 500 clamp(22px,2.3vw,32px)/1.15 "Cormorant",serif;letter-spacing:.01em;color:#c9f5ec}
 .hero .lead{max-width:32ch;font-size:clamp(18px,2vw,22px)}
 .cta{display:flex;flex-wrap:wrap;gap:12px}
 .addr{margin:24px 0 0;font-size:16px;color:var(--soft)}
@@ -506,7 +508,6 @@ h1,h2,h3{font-weight:500;margin:0}
 @media (max-width:560px){
   .hero-info{grid-template-columns:1fr;gap:12px}
   .cta .btn,.contact-actions .btn,.book-cta .btn{flex:1 1 100%}
-  .h1-sub{margin-top:14px}
 }
 @media (max-width:380px){
   .facts li{padding:18px 14px}
@@ -632,7 +633,7 @@ h1,h2,h3{font-weight:500;margin:0}
 
   <div class="wrap main">
     <div class="hero-text">
-      <h1 class="h1" aria-label="Сауна «Русалка» в Хабаровске"><span class="h1-word" aria-hidden="true">Русалка</span><span class="h1-sub" aria-hidden="true">сауна с бассейном в Хабаровске</span></h1>
+      <h1 class="h1" aria-label="Сауна «Русалка» в Хабаровске"><span class="h1-lock" aria-hidden="true"><span class="h1-pre">Сауна</span><span class="h1-word">Русалка</span><span class="h1-sub">с бассейном в Хабаровске</span></span></h1>
       <ul class="hero-info">
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span>Хабаровск, Строительная, 9<small>остановка «Марина», 330 м</small></span></li>
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Круглосуточно<small>по предварительной записи</small></span></li>
@@ -849,8 +850,7 @@ h1,h2,h3{font-weight:500;margin:0}
         <p class="note" data-rv style="--i:2">Можно оплатить картой.</p>
       </div>
       <div class="calc caustic" data-rv="scale" style="--i:1">
-        <h3>Сколько будет стоить ваш вечер?</h3>
-        <p class="calc-text">Днём в будни — дешевле. Позвоните, назовите день и время — подскажем, сколько выйдет и какие часы свободны.</p>
+        <p class="calc-text">Позвоните, назовите день и время — подскажем, сколько выйдет и какие часы свободны.</p>
         <div class="calc-phones">
           <a class="btn btn--main" href="tel:+74212358440">+7 4212 35-84-40</a>
           <a class="btn btn--alt" href="tel:+79147723178">+7 914 772-31-78</a>
