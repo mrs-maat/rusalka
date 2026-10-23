@@ -4,14 +4,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Сауна «Русалка» в Хабаровске: бассейн, финская парная, круглосуточно</title>
-<meta name="description" content="Сауна «Русалка» в Хабаровске, Строительная, 9. Финская парная, тёплый бассейн с подсветкой, водопадом и джакузи, караоке. До 15 гостей. От 1700 ₽ в час, круглосуточно по записи: +7 4212 35-84-40, +7 914 772-31-78.">
+<meta name="description" content="Сауна «Русалка» в Хабаровске, Строительная, 9. Финская парная, тёплый бассейн с подсветкой, водопадом и джакузи, караоке. До 6 гостей. От 1500 ₽ в час, круглосуточно по записи: +7 4212 35-84-40, +7 914 772-31-78.">
 <meta name="theme-color" content="#03181c">
 <meta name="color-scheme" content="dark">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="ru_RU">
 <meta property="og:site_name" content="Сауна «Русалка»">
 <meta property="og:title" content="Сауна «Русалка» в Хабаровске">
-<meta property="og:description" content="Из жаркой финской парной сразу в тёплый бассейн с подсветкой, водопадом и джакузи. До 15 гостей, от 1700 ₽ в час, круглосуточно по записи.">
+<meta property="og:description" content="Из жаркой финской парной сразу в тёплый бассейн с подсветкой, водопадом и джакузи. До 6 гостей, от 1500 ₽ в час, круглосуточно по записи.">
 <!-- Когда появятся фото и адрес сайта: добавить og:image и og:url -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,7 +21,7 @@
   "@context": "https://schema.org",
   "@type": "DaySpa",
   "name": "Сауна «Русалка»",
-  "description": "Сауна с финской парной и бассейном с подогревом и подсветкой: фонтан, гейзер, водопад, гидромассаж, джакузи. Караоке-зона, массажное кресло, Wi-Fi. До 15 гостей.",
+  "description": "Сауна с финской парной и бассейном с подогревом и подсветкой: фонтан, гейзер, водопад, гидромассаж, джакузи. Караоке-зона, массажное кресло, Wi-Fi. До 6 гостей.",
   "telephone": ["+7 4212 35-84-40", "+7 914 772-31-78"],
   "address": {
     "@type": "PostalAddress",
@@ -36,10 +36,10 @@
     "opens": "00:00",
     "closes": "23:59"
   }],
-  "priceRange": "от 1700 ₽ в час",
+  "priceRange": "1500–1800 ₽ в час",
   "currenciesAccepted": "RUB",
   "paymentAccepted": "Банковская карта",
-  "maximumAttendeeCapacity": 15,
+  "maximumAttendeeCapacity": 6,
   "amenityFeature": [
     {"@type":"LocationFeatureSpecification","name":"Финская парная","value":true},
     {"@type":"LocationFeatureSpecification","name":"Бассейн с подогревом и подсветкой","value":true},
@@ -301,6 +301,12 @@ h1,h2,h3{font-weight:500;margin:0}
 .calc{border-radius:36px;background:var(--sea);padding:36px}
 .calc h3{font-family:"Manrope",sans-serif;font-weight:600;font-size:20px;margin:0 0 20px}
 .calc-text{margin:0 0 28px;font-size:18px;line-height:1.55}
+.tariffs{list-style:none;margin:0 0 20px;padding:0;display:grid;gap:10px;max-width:460px}
+.tariffs li{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:14px 20px;border-radius:18px;background:rgba(10,77,82,.45)}
+.tariffs li:first-child{background:rgba(159,243,226,.14);box-shadow:inset 0 0 0 1px rgba(159,243,226,.35)}
+.tariffs span{font-size:17px}
+.tariffs b{font-family:"Cormorant",serif;font-weight:600;font-size:30px;line-height:1;color:var(--pearl);white-space:nowrap}
+.tariffs small{font-family:"Manrope",sans-serif;font-size:14px;font-weight:500;color:var(--soft);margin-left:2px}
 .calc-phones{display:grid;gap:12px}
 .calc .btn{width:100%;padding:0 16px}
 .bignum .from{margin:0 .25em 0 0}
@@ -310,7 +316,7 @@ h1,h2,h3{font-weight:500;margin:0}
    ========================================================= */
 .book{position:relative;background:var(--sea);padding-block:120px;overflow:hidden;isolation:isolate}
 .book .edge{color:var(--sea)}
-.book-head{max-width:min(760px,62%)}
+.book-head{max-width:760px}
 .steps{list-style:none;margin:48px 0 56px;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:16px;counter-reset:none}
 .steps li{padding:30px 28px;border-radius:var(--r-card);background:var(--deep)}
 .steps h3{font-family:"Cormorant",serif;font-size:clamp(32px,3vw,42px);line-height:1;margin-bottom:12px;color:var(--pearl)}
@@ -374,7 +380,14 @@ h1,h2,h3{font-weight:500;margin:0}
 @keyframes ping{70%{box-shadow:0 0 0 9px rgba(94,227,154,0)}100%{box-shadow:0 0 0 0 rgba(94,227,154,0)}}
 
 /* ---------- звук воды ---------- */
-.hero-meta{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin:-8px 0 26px}
+.hero-info{list-style:none;margin:0 0 26px;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:14px 28px;max-width:640px}
+.hero-info li{display:flex;gap:12px;align-items:flex-start;font-weight:600;font-size:17px;line-height:1.3}
+.hero-info svg{flex:none;width:22px;height:22px;margin-top:1px;color:var(--pearl)}
+.hero-info small{display:block;font-weight:400;font-size:14.5px;color:var(--soft);margin-top:3px}
+.hero-info a{display:block;text-decoration:none}
+.hero-info a+a{margin-top:3px}
+.hero-text .lead{font-size:clamp(17px,1.6vw,19px);max-width:44ch;margin:24px 0 18px;color:var(--soft)}
+.hero-meta{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin:0}
 .hero-meta .now{margin:0}
 .sound{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 18px 0 14px;border:1px solid rgba(159,243,226,.35);border-radius:999px;background:rgba(3,24,28,.45);color:var(--ink);font:600 15px/1 "Manrope",sans-serif;cursor:pointer;transition:background-color .25s,transform .2s var(--ease-out)}
 .sound:hover{background:rgba(10,77,82,.95)}
@@ -386,15 +399,11 @@ h1,h2,h3{font-weight:500;margin:0}
 .sound[aria-pressed="true"] .sound-off{display:none}
 
 /* ---------- рыбка ---------- */
-.fish{position:absolute;right:var(--gutter);top:-24px;z-index:2;display:flex;flex-direction:column;align-items:flex-end;gap:4px;pointer-events:none}
-.fish>*{pointer-events:auto}
-.book.swim .fish{animation:swimIn 2.6s var(--ease-out) both}
-.fish-svg{width:220px;height:auto;flex:none;animation:bob 3s ease-in-out infinite;filter:drop-shadow(0 6px 14px rgba(0,0,0,.35))}
-.mini-mm .mm-fin{transform-box:fill-box;transform-origin:0 50%;animation:flap .7s ease-in-out infinite alternate}
-.mini-mm .mm-hair{transform-box:fill-box;transform-origin:15% 60%;animation:hairFlow 2.4s ease-in-out infinite}
-.mini-mm .mm-arm{transform-box:fill-box;transform-origin:100% 0;animation:stroke 1.6s ease-in-out infinite}
-@keyframes hairFlow{0%,100%{transform:skewY(0)}50%{transform:skewY(-5deg) scaleX(1.04)}}
-@keyframes stroke{0%,100%{transform:rotate(0)}50%{transform:rotate(14deg)}}
+.fish{position:fixed;right:20px;bottom:20px;z-index:42;display:flex;flex-direction:column;align-items:flex-end;gap:4px;animation:swimIn 2.4s var(--ease-out) both}
+.fish[hidden]{display:none}
+.fish-close{position:absolute;top:-14px;left:-14px;width:32px;height:32px;border:0;border-radius:50%;background:#0a4d52;color:var(--ink);font:500 20px/1 "Manrope",sans-serif;cursor:pointer}
+.fish-tail{transform-box:fill-box;transform-origin:0 50%;animation:flap .5s ease-in-out infinite alternate}
+.fish-svg{width:96px;height:auto;flex:none;animation:bob 3s ease-in-out infinite;filter:drop-shadow(0 6px 14px rgba(0,0,0,.35))}
 .fish .fish-bubble{white-space:normal;max-width:min(240px,calc(100vw - 40px));margin-right:28px;padding:12px 16px;border-radius:20px 20px 4px 20px;background:var(--pearl);color:var(--on-pearl);font-weight:700;font-size:15px;line-height:1.3;text-decoration:none;box-shadow:0 10px 26px rgba(0,0,0,.35)}
 @keyframes swimIn{0%{transform:translateX(130%)}70%{transform:translateX(-10px)}100%{transform:none}}
 @keyframes bob{0%,100%{transform:translateY(0) rotate(-2deg)}50%{transform:translateY(-8px) rotate(2deg)}}
@@ -415,12 +424,14 @@ h1,h2,h3{font-weight:500;margin:0}
 @keyframes lbZoom{from{opacity:0;transform:scale(.94)}}
 .lb-open{overflow:hidden}
 
+/* ---------- меню для телефона ---------- */
+.menu-btn{display:none}
+.mmenu[hidden]{display:none}
+
 /* =========================================================
    Планшет и телефон
    ========================================================= */
 @media (max-width:1020px){
-  .book-head{max-width:none}
-  .fish{position:relative;right:auto;top:auto;margin-top:28px}
   .rev-grid{grid-template-columns:1fr 1fr}
   .navlinks .hide-md{display:none}
   .facts ul{grid-template-columns:1fr 1fr}
@@ -429,6 +440,7 @@ h1,h2,h3{font-weight:500;margin:0}
   .rest .ph{position:relative;top:auto;max-width:520px}
 }
 @media (max-width:860px){
+  .fish{right:12px;bottom:calc(max(14px,env(safe-area-inset-bottom)) + 84px)}
   body{font-size:17px}
   .main{grid-template-columns:1fr;padding-block:2vh 22vh}
   .tail-wrap{position:absolute;right:-30px;top:40px;width:180px;opacity:.5;z-index:-1}
@@ -455,11 +467,26 @@ h1,h2,h3{font-weight:500;margin:0}
   .hours-card b{font-size:clamp(38px,11vw,56px)}
   .edge{height:44px}
   .bar{display:none}
+  .navlinks a:not(.navtel){display:none}
+  .nav{padding-right:60px}
+  .menu-btn{position:fixed;top:max(14px,env(safe-area-inset-top));right:14px;z-index:60;display:grid;align-content:center;justify-items:center;gap:5px;width:48px;height:48px;border:0;border-radius:50%;background:rgba(3,24,28,.85);box-shadow:0 6px 20px rgba(0,0,0,.35);cursor:pointer;-webkit-tap-highlight-color:transparent}
+  .menu-btn span{display:block;width:20px;height:2px;border-radius:2px;background:var(--ink);transition:transform .3s var(--ease-out),opacity .2s}
+  .menu-open .menu-btn span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+  .menu-open .menu-btn span:nth-child(2){opacity:0}
+  .menu-open .menu-btn span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+  .mmenu{position:fixed;inset:0;z-index:55;display:flex;flex-direction:column;padding:22px 20px max(24px,env(safe-area-inset-bottom));background:linear-gradient(180deg,#063a3f,#03181c 70%);overflow-y:auto;animation:menuIn .35s var(--ease-out)}
+  .mmenu-mark{font-family:"Great Vibes",cursive;font-size:40px;line-height:1;text-decoration:none;color:var(--pearl);margin-bottom:18px}
+  .mmenu ul{list-style:none;margin:0 0 auto;padding:0}
+  .mmenu li a{display:block;padding:9px 0;font-family:"Cormorant",serif;font-size:34px;line-height:1.15;text-decoration:none;color:var(--ink);border-bottom:1px solid rgba(159,243,226,.12)}
+  .mmenu li a:active{color:var(--pearl)}
+  .mmenu-phones{display:grid;gap:10px;margin-top:24px}
+  .mmenu-phones .btn{width:100%}
+  @keyframes menuIn{from{opacity:0;transform:translateY(-12px)}}
+  .menu-open{overflow:hidden}
   .scrollhint{display:none}
   .callbar{display:block;position:fixed;left:16px;right:16px;bottom:max(14px,env(safe-area-inset-bottom));z-index:40;transform:translateY(160%);transition:transform .45s var(--ease-out)}
   .callbar .btn{width:100%;box-shadow:0 10px 30px rgba(0,0,0,.45)}
-  .fish{position:relative;right:auto;top:auto;margin-top:28px}
-  .fish-svg{width:170px}
+  .fish-svg{width:80px}
   .lb-prev,.lb-next{top:auto;bottom:12px;margin:0}
   .lb-cap{bottom:28px;padding:0 76px}
   .past .callbar{transform:none}
@@ -467,7 +494,7 @@ h1,h2,h3{font-weight:500;margin:0}
   .foot{margin-top:96px;padding-bottom:110px}
 }
 @media (max-width:560px){
-  .navlinks a:not(.navtel){display:none}
+  .hero-info{grid-template-columns:1fr;gap:12px}
   .cta .btn,.contact-actions .btn,.book-cta .btn{flex:1 1 100%}
   .h1-sub{margin-top:14px}
 }
@@ -484,7 +511,7 @@ h1,h2,h3{font-weight:500;margin:0}
    ========================================================= */
 @media (prefers-reduced-motion:reduce){
   .hot-steam,.now-dot{display:none}
-  .fish,.fish-svg,.mini-mm *,.lb,.lb-img{animation:none!important}
+  .fish,.fish-svg,.fish-tail,.lb,.lb-img{animation:none!important}
   html{scroll-behavior:auto}
   .light i,.rays i,.tail,.foot-name,.waves svg,.scrollhint::after,.caustic::after,.ph::after{animation:none!important}
   .bub,.puffs{display:none}
@@ -530,6 +557,41 @@ h1,h2,h3{font-weight:500;margin:0}
   <button class="lb-btn lb-next" type="button" aria-label="Следующее фото">›</button>
 </div>
 
+<!-- Рыбка-подсказка: выплывает через 30 секунд, если гость ещё не звонил -->
+<div class="fish" hidden>
+  <button class="fish-close" type="button" aria-label="Закрыть подсказку">×</button>
+  <a class="fish-bubble" href="tel:+74212358440">Позвоните — подскажем свободное время!</a>
+  <svg class="fish-svg" viewBox="0 0 120 70" aria-hidden="true">
+    <defs><linearGradient id="fg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#9ff3e2"/><stop offset="1" stop-color="#35b8a9"/></linearGradient></defs>
+    <path class="fish-tail" d="M86 35 116 14c-4 14-4 28 0 42Z" fill="#35b8a9"/>
+    <path d="M8 35C20 12 58 6 86 35 58 64 20 58 8 35Z" fill="url(#fg)"/>
+    <path d="M46 16c8 2 16 8 20 14M44 54c8-2 16-8 20-14" stroke="#e3f6f1" stroke-opacity=".5" stroke-width="1.5" fill="none"/>
+    <circle cx="26" cy="31" r="4.5" fill="#03181c"/><circle cx="24.6" cy="29.6" r="1.4" fill="#fff"/>
+  </svg>
+</div>
+
+<!-- Меню для телефона: кнопка всегда видна, разделы открываются на весь экран -->
+<button class="menu-btn" type="button" aria-expanded="false" aria-controls="mmenu" aria-label="Открыть меню">
+  <span></span><span></span><span></span>
+</button>
+<nav class="mmenu" id="mmenu" aria-label="Разделы сайта" hidden>
+  <a class="mmenu-mark" href="#top">Русалка</a>
+  <ul>
+    <li><a href="#water">Бассейн</a></li>
+    <li><a href="#steam">Парная</a></li>
+    <li><a href="#rest">Отдых</a></li>
+    <li><a href="#gallery">Фото</a></li>
+    <li><a href="#reviews">Отзывы</a></li>
+    <li><a href="#price">Цена</a></li>
+    <li><a href="#book">Забронировать</a></li>
+    <li><a href="#contacts">Как добраться</a></li>
+  </ul>
+  <div class="mmenu-phones">
+    <a class="btn btn--main" href="tel:+74212358440">+7 4212 35-84-40</a>
+    <a class="btn btn--alt" href="tel:+79147723178">+7 914 772-31-78</a>
+  </div>
+</nav>
+
 <header class="hero" id="top">
   <div class="light" aria-hidden="true"><i></i><i></i><i></i></div>
   <div class="rays" aria-hidden="true"><i></i></div>
@@ -551,7 +613,17 @@ h1,h2,h3{font-weight:500;margin:0}
   <div class="wrap main">
     <div class="hero-text">
       <h1 class="h1" aria-label="Сауна «Русалка» в Хабаровске"><span class="h1-word" aria-hidden="true">Русалка</span><span class="h1-sub" aria-hidden="true">сауна с бассейном в Хабаровске</span></h1>
-      <p class="lead">Из жаркой финской парной — сразу в тёплую воду с подсветкой, водопадом и джакузи. Вечер для семьи или друзей — до 15 человек.</p>
+      <ul class="hero-info">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span>Хабаровск, Строительная, 9<small>остановка «Марина», 330 м</small></span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Круглосуточно<small>по предварительной записи</small></span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 20V4h6a4 4 0 0 1 0 8H6M6 16h8"/></svg><span>от 1500&nbsp;₽ в час<small>будни 10:00–14:00, в другое время 1800&nbsp;₽</small></span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><span><a href="tel:+74212358440">+7 4212 35-84-40</a><a href="tel:+79147723178">+7 914 772-31-78</a></span></li>
+      </ul>
+      <div class="cta">
+        <a class="btn btn--main" href="tel:+74212358440">Позвонить</a>
+        <a class="btn btn--alt" href="https://yandex.ru/maps/org/rusalka/122112668871/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 11 18-8-8 18-2-8-8-2Z"/></svg>Построить маршрут</a>
+      </div>
+      <p class="lead">Финская парная и тёплый бассейн с подсветкой, водопадом и джакузи. Своя компания до 6 человек.</p>
       <div class="hero-meta">
         <p class="now" id="now"><span class="now-dot" aria-hidden="true"></span><span id="now-text">Хабаровск · открыто круглосуточно</span></p>
         <button class="sound" type="button" aria-pressed="false" aria-label="Включить звук воды">
@@ -559,11 +631,6 @@ h1,h2,h3{font-weight:500;margin:0}
           <span>Включить звук воды</span>
         </button>
       </div>
-      <div class="cta">
-        <a class="btn btn--main" href="tel:+74212358440">Позвонить</a>
-        <a class="btn btn--alt" href="#book">Забронировать</a>
-      </div>
-      <p class="addr">Хабаровск, Строительная, 9 · остановка «Красная речка», 330 м<br><a href="tel:+74212358440">+7 4212 35-84-40</a> · <a href="tel:+79147723178">+7 914 772-31-78</a></p>
     </div>
 
     <div class="tail-wrap" data-par="tail">
@@ -598,9 +665,9 @@ h1,h2,h3{font-weight:500;margin:0}
   <!-- ===== 2. Факты ===== -->
   <section class="facts" aria-label="Коротко о сауне">
     <ul class="wrap">
-      <li class="caustic" data-rv style="--i:0"><b>от 1700 ₽</b><span>час аренды сауны</span></li>
+      <li class="caustic" data-rv style="--i:0"><b>от 1500 ₽</b><span>час аренды, будни днём</span></li>
       <li class="caustic" data-rv style="--i:1"><b>24 часа</b><span>открыто круглосуточно, по записи</span></li>
-      <li class="caustic" data-rv style="--i:2"><b>до 15</b><span>гостей в одной компании</span></li>
+      <li class="caustic" data-rv style="--i:2"><b>до 6</b><span>гостей в одной компании</span></li>
       <li class="caustic" data-rv style="--i:3"><b>Бассейн</b><span>с водопадом, джакузи и подсветкой</span></li>
     </ul>
   </section>
@@ -670,7 +737,7 @@ h1,h2,h3{font-weight:500;margin:0}
     <div class="wrap rest-grid">
       <div>
         <h2 class="h2" id="rest-title" data-rv>Между заходами — свой вечер</h2>
-        <p class="lead" data-rv style="--i:1">Отдышались после парной, обсохли — и можно петь, болтать и есть своё. Приезжайте семьёй или компанией друзей, до 15 человек.</p>
+        <p class="lead" data-rv style="--i:1">Отдышались после парной, обсохли — и можно петь, болтать и есть своё. Приезжайте семьёй или компанией друзей, до 6 человек.</p>
         <ul class="rows">
           <li data-rv style="--i:0"><h3>Караоке</h3><p>Та самая песня, которую вся компания знает наизусть. Микрофон по кругу.</p></li>
           <li data-rv style="--i:1"><h3>Массажное кресло</h3><p>Пока все в бассейне, кто-то обязательно займёт его первым.</p></li>
@@ -754,13 +821,16 @@ h1,h2,h3{font-weight:500;margin:0}
     <div class="wrap price-grid">
       <div>
         <h2 class="h2" id="price-title" data-rv>Цена</h2>
-        <p class="bignum" data-rv><small class="from">от</small>1700 ₽<small>в час</small></p>
-        <p class="lead" data-rv style="--i:1">Аренда сауны с бассейном, парной и караоке — от 1700 ₽ в час.</p>
+        <p class="bignum" data-rv><small class="from">от</small>1500 ₽<small>в час</small></p>
+        <ul class="tariffs" data-rv style="--i:1">
+          <li><span>Будни, 10:00–14:00</span><b>1500 ₽<small>/час</small></b></li>
+          <li><span>Всё остальное время</span><b>1800 ₽<small>/час</small></b></li>
+        </ul>
         <p class="note" data-rv style="--i:2">Можно оплатить картой.</p>
       </div>
       <div class="calc caustic" data-rv="scale" style="--i:1">
         <h3>Сколько будет стоить ваш вечер?</h3>
-        <p class="calc-text">Цена часа зависит от дня недели и времени суток. Позвоните, назовите день и время — и сразу узнаете точную сумму.</p>
+        <p class="calc-text">Днём в будни — дешевле. Позвоните, назовите день и время — подскажем, сколько выйдет и какие часы свободны.</p>
         <div class="calc-phones">
           <a class="btn btn--main" href="tel:+74212358440">+7 4212 35-84-40</a>
           <a class="btn btn--alt" href="tel:+79147723178">+7 914 772-31-78</a>
@@ -781,7 +851,7 @@ h1,h2,h3{font-weight:500;margin:0}
       <ol class="steps">
         <li data-rv style="--i:0"><h3>Позвоните</h3><p><a href="tel:+74212358440">+7 4212 35-84-40</a> или <a href="tel:+79147723178">+7 914 772-31-78</a>, в любое время суток.</p></li>
         <li data-rv style="--i:1"><h3>Скажите четыре вещи</h3><p>День, во сколько приедете, на сколько часов и сколько вас будет.</p></li>
-        <li data-rv style="--i:2"><h3>Приезжайте</h3><p>Хабаровск, Строительная, 9. От остановки «Красная речка» — 330 метров.</p></li>
+        <li data-rv style="--i:2"><h3>Приезжайте</h3><p>Хабаровск, Строительная, 9. От остановки «Марина» — 330 метров.</p></li>
       </ol>
       <div class="book-cta" data-rv style="--i:3">
         <a class="btn btn--main btn--big" href="tel:+74212358440">
@@ -792,28 +862,7 @@ h1,h2,h3{font-weight:500;margin:0}
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>
           +7 914 772-31-78
         </a>
-        <p class="note">До 15 гостей в одной компании. Свою еду и напитки можно взять с собой.</p>
-      </div>
-      <!-- Русалочка-подсказка: подплывает, когда блок брони появляется на экране -->
-      <div class="fish">
-        <a class="fish-bubble" href="tel:+74212358440">Позвоните — подскажем свободное время!</a>
-        <svg class="fish-svg mini-mm" viewBox="0 0 164 72" aria-hidden="true">
-          <defs>
-            <linearGradient id="mg" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#9ff3e2"/><stop offset=".55" stop-color="#35b8a9"/><stop offset="1" stop-color="#0b6266"/></linearGradient>
-            <linearGradient id="mh" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#2a9d92"/><stop offset="1" stop-color="#0a4d52" stop-opacity=".2"/></linearGradient>
-            <pattern id="ms" width="7" height="6" patternUnits="userSpaceOnUse"><path d="M0 6a3.5 3.5 0 0 1 7 0" fill="none" stroke="#e3f6f1" stroke-opacity=".4" stroke-width=".9"/></pattern>
-            <clipPath id="mc"><path d="M30 29C40 24 56 25 66 30C84 27 104 32 124 37L124 44C104 47 84 49 64 45C54 47 40 46 31 41C27 38 27 32 30 29Z"/></clipPath>
-          </defs>
-          <path class="mm-hair" d="M14 24C16 12 32 10 42 18C54 14 70 16 84 10C76 22 60 26 46 27C38 28 30 30 24 32Z" fill="url(#mh)"/>
-          <path class="mm-fin" d="M122 40C132 27 146 20 160 17C152 30 152 46 160 60C146 56 132 50 122 42Z" fill="#35b8a9"/>
-          <path d="M124 40l30-16M124 41l34 3M124 42l30 14" stroke="#e3f6f1" stroke-opacity=".45" stroke-width="1" fill="none"/>
-          <path d="M30 29C40 24 56 25 66 30C84 27 104 32 124 37L124 44C104 47 84 49 64 45C54 47 40 46 31 41C27 38 27 32 30 29Z" fill="url(#mg)"/>
-          <rect x="62" y="20" width="66" height="32" fill="url(#ms)" clip-path="url(#mc)"/>
-          <path d="M62 30C65 35 65 41 62 45" stroke="#e3f6f1" stroke-opacity=".55" stroke-width="1.1" fill="none"/>
-          <path class="mm-arm" d="M36 34C28 38 18 41 6 39" stroke="url(#mg)" stroke-width="4.5" stroke-linecap="round" fill="none"/>
-          <circle cx="22" cy="31" r="8.5" fill="#9ff3e2"/>
-          <path d="M14 29C14 21 24 18 31 24C27 23 20 23 14 29Z" fill="#2a9d92"/>
-        </svg>
+        <p class="note">До 6 гостей в одной компании. Свою еду и напитки можно взять с собой.</p>
       </div>
     </div>
   </section>
@@ -828,11 +877,11 @@ h1,h2,h3{font-weight:500;margin:0}
       </div>
       <div class="qa">
         <details data-rv style="--i:0"><summary>Можно прийти со своей едой и напитками?</summary><p>Да, берите с собой всё, что любите.</p></details>
-        <details data-rv style="--i:1"><summary>Сколько человек поместится?</summary><p>До 15 человек. Подойдёт и для семейного вечера, и для компании друзей.</p></details>
-        <details data-rv style="--i:2"><summary>Сколько стоит?</summary><p>От 1700 ₽ за час аренды сауны. Цена зависит от дня недели и времени суток — точную сумму на ваш день назовём по телефону.</p></details>
+        <details data-rv style="--i:1"><summary>Сколько человек поместится?</summary><p>До 6 человек. Подойдёт и для семейного вечера, и для компании друзей.</p></details>
+        <details data-rv style="--i:2"><summary>Сколько стоит?</summary><p>В будни с 10:00 до 14:00 — 1500 ₽ в час. Всё остальное время, вечером, ночью и в выходные — 1800 ₽ в час.</p></details>
         <details data-rv style="--i:3"><summary>Можно оплатить картой?</summary><p>Да, оплата картой есть.</p></details>
         <details data-rv style="--i:4"><summary>Когда вы работаете?</summary><p>Круглосуточно, по предварительной записи. Позвоните и договоритесь о времени.</p></details>
-        <details data-rv style="--i:5"><summary>Как добраться?</summary><p>Хабаровск, Строительная ул., 9. Ближайшая остановка — «Красная речка», 330 метров пешком. <a href="https://yandex.ru/maps/org/rusalka/122112668871/" target="_blank" rel="noopener">Построить маршрут в Яндекс Картах</a>.</p></details>
+        <details data-rv style="--i:5"><summary>Как добраться?</summary><p>Хабаровск, Строительная ул., 9. Ближайшая остановка — «Марина», 330 метров пешком. <a href="https://yandex.ru/maps/org/rusalka/122112668871/" target="_blank" rel="noopener">Построить маршрут в Яндекс Картах</a>.</p></details>
       </div>
     </div>
   </section>
@@ -846,7 +895,7 @@ h1,h2,h3{font-weight:500;margin:0}
         <h2 class="h2" id="contacts-title" data-rv>Как нас найти</h2>
         <address class="address" data-rv style="--i:1">Хабаровск,<br>Строительная, 9</address>
         <ul class="contact-list" data-rv style="--i:2">
-          <li>Остановка «Красная речка» — 330 м</li>
+          <li>Остановка «Марина» — 330 м</li>
           <li><a href="tel:+74212358440">+7 4212 35-84-40</a></li>
           <li><a href="tel:+79147723178">+7 914 772-31-78</a></li>
         </ul>
@@ -1037,10 +1086,16 @@ h1,h2,h3{font-weight:500;margin:0}
     }
   }
 
-  /* Русалочка-подсказка: подплывает каждый раз, когда блок брони появляется на экране */
-  var book = document.querySelector('.book');
-  if (book && 'IntersectionObserver' in window){
-    new IntersectionObserver(function(es){ es.forEach(function(e){ if (e.isIntersecting){ book.classList.remove('swim'); void book.offsetWidth; book.classList.add('swim'); } }); }, {threshold:.25}).observe(book);
+  /* Рыбка-подсказка: через 30 секунд, если гость ещё не звонил; один раз за визит */
+  var fish = document.querySelector('.fish'), fishSeen = false;
+  try { fishSeen = sessionStorage.getItem('fish') === '1'; } catch(e){}
+  if (fish && !fishSeen){
+    var called = false;
+    document.addEventListener('click', function(e){ if (e.target.closest('a[href^="tel:"]')) called = true; });
+    setTimeout(function(){ if (!called) fish.hidden = false; }, 30000);
+    function fishGone(){ fish.hidden = true; try { sessionStorage.setItem('fish','1'); } catch(e){} }
+    fish.querySelector('.fish-close').addEventListener('click', fishGone);
+    fish.querySelector('.fish-bubble').addEventListener('click', fishGone);
   }
 
   /* Фото на весь экран: нажмите на любое фото, листайте стрелками или свайпом */
@@ -1105,6 +1160,17 @@ h1,h2,h3{font-weight:500;margin:0}
     if (on){ ac.resume(); master.gain.setTargetAtTime(.45, ac.currentTime, .5); clearTimeout(blT); blT = setTimeout(bloop, 700); }
     else { master.gain.setTargetAtTime(0, ac.currentTime, .25); clearTimeout(blT); }
   });
+  /* Меню для телефона */
+  var mBtn = document.querySelector('.menu-btn'), mMenu = document.getElementById('mmenu');
+  function menuSet(open){
+    mMenu.hidden = !open; doc.classList.toggle('menu-open', open);
+    mBtn.setAttribute('aria-expanded', open); mBtn.setAttribute('aria-label', open ? 'Закрыть меню' : 'Открыть меню');
+  }
+  if (mBtn && mMenu){
+    mBtn.addEventListener('click', function(){ menuSet(mMenu.hidden); });
+    mMenu.addEventListener('click', function(e){ if (e.target.closest('a')) menuSet(false); });
+    document.addEventListener('keydown', function(e){ if (e.key === 'Escape' && !mMenu.hidden) menuSet(false); });
+  }
 })();
 </script>
 </body>
