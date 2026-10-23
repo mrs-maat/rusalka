@@ -308,17 +308,22 @@ h1,h2,h3{font-weight:500;margin:0}
 .t-price{margin-top:auto;font-family:"Cormorant",serif;font-weight:600;font-size:clamp(46px,4.6vw,62px);line-height:.95;color:var(--pearl);white-space:nowrap}
 .nw{white-space:nowrap}
 .t-unit{font-size:15px;color:var(--soft);margin-top:4px}
-.guests{max-width:520px;margin:0 0 20px;padding:18px 20px;border-radius:18px;background:rgba(3,24,28,.5);box-shadow:inset 0 0 0 1px rgba(159,243,226,.12)}
-.guests-row{display:flex;gap:6px;margin-bottom:12px}
+.guests{max-width:520px;margin:0 0 20px;padding:20px 20px 16px;border-radius:18px;background:rgba(3,24,28,.5);box-shadow:inset 0 0 0 1px rgba(159,243,226,.12)}
+.g-title{margin:0 0 10px;font-size:15px;font-weight:700;color:var(--ink)}
+.guests-row{display:flex;gap:6px;margin-bottom:10px}
 .guests-row svg{width:26px;height:auto;flex:none}
 .guests-row .in{fill:var(--pearl);stroke:none}
-.guests-row .extra{fill:none;stroke:var(--pearl);stroke-width:1.6;stroke-dasharray:3 2.4;opacity:.75}
-.guests-row .extra:first-of-type{margin-left:10px}
-.guests-legend{display:flex;justify-content:space-between;gap:6px 16px;flex-wrap:wrap;font-size:15px;line-height:1.35;color:var(--soft)}
+.guests-row .plus{fill:none;stroke:var(--heat);stroke-width:1.7;stroke-dasharray:3 2.4}
+.guests-row .plus:first-of-type{margin-left:10px}
+.guests-legend{display:grid;gap:4px;margin-bottom:16px;padding-bottom:16px;border-bottom:1px solid rgba(159,243,226,.15);font-size:15px;line-height:1.4;color:var(--soft)}
 .guests-legend b{color:var(--ink)}
-.guests-legend .g-extra{text-align:right}
-.guests-ex{margin:12px 0 0;padding-top:12px;border-top:1px solid rgba(159,243,226,.15);font-size:15px;color:var(--soft)}
-.guests-ex b{color:var(--pearl);white-space:nowrap}
+.guests-legend span::before{content:"";display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:8px;background:var(--pearl);vertical-align:1px}
+.guests-legend .g-plus::before{background:none;box-shadow:inset 0 0 0 1.5px var(--heat)}
+.receipt{margin:0;display:grid;gap:10px}
+.receipt div{display:grid;gap:3px;padding:10px 14px;border-radius:12px;background:rgba(159,243,226,.07)}
+.receipt dt{font-size:15px;font-weight:700;color:var(--pearl)}
+.receipt dd{margin:0;font-size:16px;line-height:1.4}
+.g-note{margin:12px 0 0;font-size:15px;color:var(--soft)}
 .calc-text{margin:0 0 28px;font-size:18px;line-height:1.55}
 .tariffs{list-style:none;margin:0 0 20px;padding:0;display:grid;gap:10px;max-width:460px}
 .tariffs li{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:14px 20px;border-radius:18px;background:rgba(10,77,82,.45)}
@@ -525,7 +530,6 @@ h1,h2,h3{font-weight:500;margin:0}
 @media (max-width:560px){
   .guests-row svg{width:21px}
   .guests-row{gap:4px}
-  .guests-legend .g-extra{text-align:left}
   .hero-info{grid-template-columns:1fr;gap:12px}
   .cta .btn,.contact-actions .btn,.book-cta .btn{flex:1 1 100%}
 }
@@ -875,9 +879,14 @@ h1,h2,h3{font-weight:500;margin:0}
           </div>
         </div>
         <div class="guests" data-rv style="--i:2">
-          <div class="guests-row" aria-hidden="true"><svg class="in" viewBox="0 0 24 32"><circle cx="12" cy="8" r="6"/><path d="M2 31c0-7 4.5-12 10-12s10 5 10 12"/></svg><svg class="in" viewBox="0 0 24 32"><circle cx="12" cy="8" r="6"/><path d="M2 31c0-7 4.5-12 10-12s10 5 10 12"/></svg><svg class="in" viewBox="0 0 24 32"><circle cx="12" cy="8" r="6"/><path d="M2 31c0-7 4.5-12 10-12s10 5 10 12"/></svg><svg class="in" viewBox="0 0 24 32"><circle cx="12" cy="8" r="6"/><path d="M2 31c0-7 4.5-12 10-12s10 5 10 12"/></svg><svg class="in" viewBox="0 0 24 32"><circle cx="12" cy="8" r="6"/><path d="M2 31c0-7 4.5-12 10-12s10 5 10 12"/></svg><svg class="in" viewBox="0 0 24 32"><circle cx="12" cy="8" r="6"/><path d="M2 31c0-7 4.5-12 10-12s10 5 10 12"/></svg><svg class="extra" viewBox="0 0 24 32"><circle cx="12" cy="8" r="6"/><path d="M2 31c0-7 4.5-12 10-12s10 5 10 12"/></svg><svg class="extra" viewBox="0 0 24 32"><circle cx="12" cy="8" r="6"/><path d="M2 31c0-7 4.5-12 10-12s10 5 10 12"/></svg><svg class="extra" viewBox="0 0 24 32"><circle cx="12" cy="8" r="6"/><path d="M2 31c0-7 4.5-12 10-12s10 5 10 12"/></svg><svg class="extra" viewBox="0 0 24 32"><circle cx="12" cy="8" r="6"/><path d="M2 31c0-7 4.5-12 10-12s10 5 10 12"/></svg></div>
-          <div class="guests-legend"><span><b>6 гостей</b> уже в цене</span><span class="g-extra"><b>+200 ₽/час</b> за каждого следующего, до 10</span></div>
-          <p class="guests-ex">Например, 8 человек в будни днём: 1500 ₽ + 400 ₽ за двух дополнительных гостей = <b>1900 ₽ в час</b></p>
+          <div class="guests-row" aria-hidden="true"><svg class="in" viewBox="0 0 24 32"><circle cx="12" cy="8" r="6"/><path d="M2 31c0-7 4.5-12 10-12s10 5 10 12"/></svg><svg class="in" viewBox="0 0 24 32"><circle cx="12" cy="8" r="6"/><path d="M2 31c0-7 4.5-12 10-12s10 5 10 12"/></svg><svg class="in" viewBox="0 0 24 32"><circle cx="12" cy="8" r="6"/><path d="M2 31c0-7 4.5-12 10-12s10 5 10 12"/></svg><svg class="in" viewBox="0 0 24 32"><circle cx="12" cy="8" r="6"/><path d="M2 31c0-7 4.5-12 10-12s10 5 10 12"/></svg><svg class="in" viewBox="0 0 24 32"><circle cx="12" cy="8" r="6"/><path d="M2 31c0-7 4.5-12 10-12s10 5 10 12"/></svg><svg class="in" viewBox="0 0 24 32"><circle cx="12" cy="8" r="6"/><path d="M2 31c0-7 4.5-12 10-12s10 5 10 12"/></svg><svg class="plus" viewBox="0 0 24 32"><circle cx="12" cy="8" r="6"/><path d="M2 31c0-7 4.5-12 10-12s10 5 10 12"/></svg><svg class="plus" viewBox="0 0 24 32"><circle cx="12" cy="8" r="6"/><path d="M2 31c0-7 4.5-12 10-12s10 5 10 12"/></svg><svg class="plus" viewBox="0 0 24 32"><circle cx="12" cy="8" r="6"/><path d="M2 31c0-7 4.5-12 10-12s10 5 10 12"/></svg><svg class="plus" viewBox="0 0 24 32"><circle cx="12" cy="8" r="6"/><path d="M2 31c0-7 4.5-12 10-12s10 5 10 12"/></svg></div>
+          <div class="guests-legend"><span><b>6 гостей</b> — уже в цене</span><span class="g-plus"><b>7-й, 8-й, 9-й, 10-й</b> — +200 ₽ в час за каждого</span></div>
+          <p class="g-title">Как считается:</p>
+          <dl class="receipt">
+            <div><dt>Аренда сауны</dt><dd>цена часа (1500 или 1800 ₽) × сколько часов</dd></div>
+            <div><dt>Доплата за гостей</dt><dd>200 ₽ × сколько гостей сверх шести × сколько часов</dd></div>
+          </dl>
+          <p class="g-note">Если вас 6 или меньше — платите только аренду.</p>
         </div>
         <p class="note" data-rv style="--i:2">Можно оплатить картой.</p>
       </div>
@@ -929,7 +938,7 @@ h1,h2,h3{font-weight:500;margin:0}
       </div>
       <div class="qa">
         <details data-rv style="--i:0"><summary>Можно прийти со своей едой и напитками?</summary><p>Да, берите с собой всё, что любите.</p></details>
-        <details data-rv style="--i:1"><summary>Сколько человек поместится?</summary><p>До 10 человек. В цену часа уже входят 6 гостей, за каждого следующего — 200 ₽ в час. Например, 8 человек в будни днём: 1500 ₽ + 400 ₽ за двух дополнительных гостей = 1900 ₽ в час.</p></details>
+        <details data-rv style="--i:1"><summary>Сколько человек поместится?</summary><p>До 10 человек. В цену часа уже входят 6 гостей. За каждого следующего — 200 ₽ за каждый час. Точную сумму на ваш состав и время подскажем по телефону.</p></details>
         <details data-rv style="--i:2"><summary>Сколько стоит?</summary><p>В будни с 10:00 до 14:00 — 1500 ₽ в час. В будни с 14:00 до 10:00 утра и в субботу и воскресенье круглосуточно — 1800 ₽ в час.</p></details>
         <details data-rv style="--i:3"><summary>Можно оплатить картой?</summary><p>Да, оплата картой есть.</p></details>
         <details data-rv style="--i:4"><summary>Когда вы работаете?</summary><p>Круглосуточно, по предварительной записи. Позвоните и договоритесь о времени.</p></details>
