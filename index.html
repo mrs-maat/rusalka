@@ -303,8 +303,9 @@ h1,h2,h3{font-weight:500;margin:0}
 .tcards{display:grid;grid-template-columns:1fr 1fr;gap:12px;max-width:520px;margin:4px 0 16px}
 .tcard{display:flex;flex-direction:column;padding:20px 20px 18px;border-radius:22px;background:rgba(10,77,82,.45)}
 .tcard--day{background:rgba(159,243,226,.12);box-shadow:inset 0 0 0 1px rgba(159,243,226,.4)}
-.t-when{font-weight:700;font-size:17px;line-height:1.25}
-.t-time{font-size:14.5px;color:var(--soft);margin:3px 0 14px}
+.t-line{font-size:18px;line-height:1.35;font-weight:600}
+.t-line b{font-weight:800;color:var(--pearl)}
+.t-line:last-of-type{margin-bottom:16px}
 .t-price{margin-top:auto;font-family:"Cormorant",serif;font-weight:600;font-size:clamp(46px,4.6vw,62px);line-height:.95;color:var(--pearl);white-space:nowrap}
 .nw{white-space:nowrap}
 .t-unit{font-size:15px;color:var(--soft);margin-top:4px}
@@ -368,7 +369,7 @@ h1,h2,h3{font-weight:500;margin:0}
 /* =========================================================
    9. Контакты и подвал
    ========================================================= */
-.contacts{position:relative;background:var(--deep);padding-block:120px 0;overflow:hidden;isolation:isolate}
+.contacts{position:relative;background:var(--deep);padding-block:120px 130px;overflow:hidden;isolation:isolate}
 .contacts .edge{color:var(--deep)}
 .contact-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:end;position:relative;z-index:1}
 .address{font-family:"Cormorant",serif;font-size:clamp(40px,4.6vw,66px);line-height:1;letter-spacing:-.015em;margin:0 0 16px;font-style:normal}
@@ -379,7 +380,9 @@ h1,h2,h3{font-weight:500;margin:0}
 .hours-card{border-radius:var(--r-card);background:var(--sea);padding:32px}
 .hours-card b{display:block;font-family:"Cormorant",serif;font-size:clamp(48px,5vw,72px);font-weight:600;line-height:1;color:var(--pearl);margin-bottom:8px}
 .hours-card p{margin:0}
-.foot{position:relative;z-index:1;margin-top:120px;padding-bottom:40px}
+.foot-wrap{position:relative;background:var(--deep);padding-top:110px}
+.foot-wrap .edge{color:var(--deep)}
+.foot{position:relative;z-index:1;padding-bottom:40px}
 .foot-name{font-family:"Great Vibes",cursive;font-weight:400;font-size:clamp(46px,6.2vw,92px);line-height:1.12;letter-spacing:0;margin:0;color:var(--ink);opacity:.92;white-space:normal;text-wrap:balance;text-align:center}
 .foot-pre{margin:0;text-align:center;font-family:"Cormorant",serif;font-style:italic;font-size:clamp(28px,3.4vw,48px);color:var(--soft);line-height:1}
 .foot-tag{margin:8px auto 0;max-width:38ch;text-align:center;font-size:clamp(17px,1.6vw,20px);color:var(--ink);line-height:1.5}
@@ -485,7 +488,7 @@ h1,h2,h3{font-weight:500;margin:0}
   .steam .ph{order:-1}
   .water{padding-block:56px 120px}
   .steam,.rest,.price,.book,.faq{padding-block:96px 112px}
-  .contacts{padding-top:96px}
+  .contacts{padding-block:96px 100px}
   .gallery{padding-bottom:110px}
   .gal{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;margin-inline:calc(var(--gutter)*-1);padding-inline:var(--gutter);padding-bottom:8px;scrollbar-width:none}
   .gal::-webkit-scrollbar{display:none}
@@ -525,7 +528,8 @@ h1,h2,h3{font-weight:500;margin:0}
   .lb-cap{bottom:28px;padding:0 76px}
   .past .callbar{transform:none}
   .past.at-end .callbar{transform:translateY(160%)}
-  .foot{margin-top:96px;padding-bottom:110px}
+  .foot-wrap{padding-top:80px}
+  .foot{padding-bottom:110px}
 }
 @media (max-width:560px){
   .guests-row svg{width:21px}
@@ -626,10 +630,11 @@ h1,h2,h3{font-weight:500;margin:0}
     <li><a href="#steam">Парная</a></li>
     <li><a href="#rest">Отдых</a></li>
     <li><a href="#gallery">Фото</a></li>
-    <li><a href="#reviews">Отзывы</a></li>
     <li><a href="#price">Цена</a></li>
     <li><a href="#book">Забронировать</a></li>
     <li><a href="#contacts">Как добраться</a></li>
+    <li><a href="#reviews">Отзывы</a></li>
+    <li><a href="#faq">Вопросы</a></li>
   </ul>
   <div class="mmenu-phones">
     <a class="btn btn--main" href="tel:+74212358440">+7 4212 35-84-40</a>
@@ -648,9 +653,9 @@ h1,h2,h3{font-weight:500;margin:0}
       <a class="hide-md" href="#water">Бассейн</a>
       <a class="hide-md" href="#steam">Парная</a>
       <a href="#gallery">Фото</a>
-      <a href="#reviews">Отзывы</a>
       <a href="#price">Цена</a>
       <a href="#contacts">Как добраться</a>
+      <a href="#reviews">Отзывы</a>
       <span class="navphones"><a class="navtel" href="tel:+74212358440">+7 4212 35-84-40</a><a class="navtel" href="tel:+79147723178">+7 914 772-31-78</a></span>
     </div>
   </nav>
@@ -823,42 +828,6 @@ h1,h2,h3{font-weight:500;margin:0}
     </div>
   </section>
 
-  <!-- ===== Отзывы (настоящие, из 2ГИС) ===== -->
-  <section class="reviews" id="reviews" aria-labelledby="rev-title">
-    <div class="wrap">
-      <div class="rev-head">
-        <h2 class="h2" id="rev-title" data-rv>Что говорят гости</h2>
-        <a class="btn btn--alt" href="https://2gis.ru/khabarovsk/firm/70000001047927668/tab/reviews" target="_blank" rel="noopener" data-rv style="--i:1">Все отзывы в 2ГИС</a>
-      </div>
-      <div class="rev-grid">
-        <figure class="rev caustic" data-rv style="--i:0">
-          <blockquote><p>Отмечали день рождения 14 февраля, администратор прекрасная женщина, добрая и вежливая, в сауне чисто, бассейн теплый, подсветка работает, проблем никаких не было, со всеми просьбами помогли, рекомендуем!</p></blockquote>
-          <figcaption><b>Ангелина Б.</b><span>февраль 2025 · 2ГИС</span></figcaption>
-        </figure>
-        <figure class="rev caustic" data-rv style="--i:1">
-          <blockquote><p>Бассейн с гейзером и водопад просто шикарный. Сервис на высшем уровне. Администрация прикладывает все силы для комфортного отдыха. Заходите, не пожалеете.</p></blockquote>
-          <figcaption><b>Роман О.</b><span>июль 2023 · 2ГИС</span></figcaption>
-        </figure>
-        <figure class="rev caustic" data-rv style="--i:2">
-          <blockquote><p>Постоянно ходим в эту сауну и больше ни в какую, всегда чисто, бассейн теплый и самое главное чистый, персонал вежливый, всем советую данную сауну.</p></blockquote>
-          <figcaption><b>Елена И.</b><span>ноябрь 2024 · 2ГИС</span></figcaption>
-        </figure>
-        <figure class="rev caustic" data-rv style="--i:0">
-          <blockquote><p>Классная сауна! На звонок ответили быстро, девушка которая нас встретила вежливая. В зале чисто, уютно, есть колонка, бассейн большой. Цены адекватные, и главное близко к дому. В общем мы остались довольны и теперь только к вам.</p></blockquote>
-          <figcaption><b>Алина А.</b><span>июнь 2025 · 2ГИС</span></figcaption>
-        </figure>
-        <figure class="rev caustic" data-rv style="--i:1">
-          <blockquote><p>Сауна отличная, все чистенько, парная хорошая — можно во весь рост лечь, бассейн теплый. Администратор очень вежливый, цена отличная, советую посетить эту сауну.</p></blockquote>
-          <figcaption><b>Дарья В.</b><span>апрель 2024 · 2ГИС</span></figcaption>
-        </figure>
-        <figure class="rev caustic" data-rv style="--i:2">
-          <blockquote><p>Отдыхали с подругами, уже не в первый раз. Очень понравилось! Чисто, уютно, бассейн теплый с джакузи, парная отличная.</p></blockquote>
-          <figcaption><b>Виктория П.</b><span>февраль 2024 · 2ГИС</span></figcaption>
-        </figure>
-      </div>
-    </div>
-  </section>
-
   <!-- ===== 6. Цена ===== -->
   <section class="price" id="price" aria-labelledby="price-title">
     <div class="edge" aria-hidden="true"><svg viewBox="0 0 2880 120" preserveAspectRatio="none"><path fill="currentColor" d="M0 70c240 0 240-45 480-45s240 45 480 45 240-45 480-45 240 45 480 45 240-45 480-45 240 45 480 45V120H0Z"/></svg></div>
@@ -868,15 +837,16 @@ h1,h2,h3{font-weight:500;margin:0}
         <h2 class="h2" id="price-title" data-rv>Цена</h2>
         <div class="tcards" data-rv style="--i:1">
           <div class="tcard tcard--day">
-            <span class="t-when">Будни днём</span>
-            <span class="t-time">пн–пт, <span class="nw">10:00–14:00</span></span>
+            <span class="t-line"><b>Пн–Пт</b></span>
+            <span class="t-line nw">10:00–14:00</span>
             <b class="t-price">1500 ₽</b><span class="t-unit">в час</span>
           </div>
           <div class="tcard">
-            <span class="t-when">Вечер, ночь, выходные</span>
-            <span class="t-time">пн–пт <span class="nw">14:00–10:00</span>,<br>сб–вс круглосуточно</span>
+            <span class="t-line"><b>Пн–Пт</b> <span class="nw">14:00–10:00</span></span>
+            <span class="t-line"><b>Сб–Вс</b> круглосуточно</span>
             <b class="t-price">1800 ₽</b><span class="t-unit">в час</span>
           </div>
+        </div>
         </div>
         <div class="guests" data-rv style="--i:2">
           <div class="guests-row" aria-hidden="true"><svg class="in" viewBox="0 0 24 32"><circle cx="12" cy="8" r="6"/><path d="M2 31c0-7 4.5-12 10-12s10 5 10 12"/></svg><svg class="in" viewBox="0 0 24 32"><circle cx="12" cy="8" r="6"/><path d="M2 31c0-7 4.5-12 10-12s10 5 10 12"/></svg><svg class="in" viewBox="0 0 24 32"><circle cx="12" cy="8" r="6"/><path d="M2 31c0-7 4.5-12 10-12s10 5 10 12"/></svg><svg class="in" viewBox="0 0 24 32"><circle cx="12" cy="8" r="6"/><path d="M2 31c0-7 4.5-12 10-12s10 5 10 12"/></svg><svg class="in" viewBox="0 0 24 32"><circle cx="12" cy="8" r="6"/><path d="M2 31c0-7 4.5-12 10-12s10 5 10 12"/></svg><svg class="in" viewBox="0 0 24 32"><circle cx="12" cy="8" r="6"/><path d="M2 31c0-7 4.5-12 10-12s10 5 10 12"/></svg><svg class="plus" viewBox="0 0 24 32"><circle cx="12" cy="8" r="6"/><path d="M2 31c0-7 4.5-12 10-12s10 5 10 12"/></svg><svg class="plus" viewBox="0 0 24 32"><circle cx="12" cy="8" r="6"/><path d="M2 31c0-7 4.5-12 10-12s10 5 10 12"/></svg><svg class="plus" viewBox="0 0 24 32"><circle cx="12" cy="8" r="6"/><path d="M2 31c0-7 4.5-12 10-12s10 5 10 12"/></svg><svg class="plus" viewBox="0 0 24 32"><circle cx="12" cy="8" r="6"/><path d="M2 31c0-7 4.5-12 10-12s10 5 10 12"/></svg></div>
@@ -928,25 +898,6 @@ h1,h2,h3{font-weight:500;margin:0}
     </div>
   </section>
 
-  <!-- ===== 8. Вопросы ===== -->
-  <section class="faq" id="faq" aria-labelledby="faq-title">
-    <div class="edge" aria-hidden="true"><svg viewBox="0 0 2880 120" preserveAspectRatio="none"><path fill="currentColor" d="M0 70c240 0 240-45 480-45s240 45 480 45 240-45 480-45 240 45 480 45 240-45 480-45 240 45 480 45V120H0Z"/></svg></div>
-    <div class="wrap faq-grid">
-      <div>
-        <h2 class="h2" id="faq-title" data-rv>Частые вопросы</h2>
-        <p class="note" data-rv style="--i:1">Не нашли ответ? Позвоните: <a href="tel:+74212358440">+7 4212 35-84-40</a> или <a href="tel:+79147723178">+7 914 772-31-78</a>.</p>
-      </div>
-      <div class="qa">
-        <details data-rv style="--i:0"><summary>Можно прийти со своей едой и напитками?</summary><p>Да, берите с собой всё, что любите.</p></details>
-        <details data-rv style="--i:1"><summary>Сколько человек поместится?</summary><p>До 10 человек. В цену часа уже входят 6 гостей. За каждого следующего — 200 ₽ за каждый час. Точную сумму на ваш состав и время подскажем по телефону.</p></details>
-        <details data-rv style="--i:2"><summary>Сколько стоит?</summary><p>В будни с 10:00 до 14:00 — 1500 ₽ в час. В будни с 14:00 до 10:00 утра и в субботу и воскресенье круглосуточно — 1800 ₽ в час.</p></details>
-        <details data-rv style="--i:3"><summary>Можно оплатить картой?</summary><p>Да, оплата картой есть.</p></details>
-        <details data-rv style="--i:4"><summary>Когда вы работаете?</summary><p>Круглосуточно, по предварительной записи. Позвоните и договоритесь о времени.</p></details>
-        <details data-rv style="--i:5"><summary>Как добраться?</summary><p>Хабаровск, Строительная ул., 9. Ближайшая остановка — «Марина», 330 метров пешком. <a href="https://yandex.ru/maps/org/rusalka/122112668871/" target="_blank" rel="noopener">Построить маршрут в Яндекс Картах</a>.</p></details>
-      </div>
-    </div>
-  </section>
-
   <!-- ===== 9. Контакты ===== -->
   <section class="contacts" id="contacts" aria-labelledby="contacts-title">
     <div class="edge" aria-hidden="true"><svg viewBox="0 0 2880 120" preserveAspectRatio="none"><path fill="currentColor" d="M0 60c180 0 180-35 360-35s180 35 360 35 180-35 360-35 180 35 360 35 180-35 360-35 180 35 360 35 180-35 360-35 180 35 360 35V120H0Z"/></svg></div>
@@ -971,6 +922,66 @@ h1,h2,h3{font-weight:500;margin:0}
       </div>
     </div>
 
+  </section>
+
+  <!-- ===== Отзывы (настоящие, из 2ГИС) ===== -->
+  <section class="reviews" id="reviews" aria-labelledby="rev-title">
+    <div class="wrap">
+      <div class="rev-head">
+        <h2 class="h2" id="rev-title" data-rv>Что говорят гости</h2>
+        <a class="btn btn--alt" href="https://2gis.ru/khabarovsk/firm/70000001047927668/tab/reviews" target="_blank" rel="noopener" data-rv style="--i:1">Все отзывы в 2ГИС</a>
+      </div>
+      <div class="rev-grid">
+        <figure class="rev caustic" data-rv style="--i:0">
+          <blockquote><p>Отмечали день рождения 14 февраля, администратор прекрасная женщина, добрая и вежливая, в сауне чисто, бассейн теплый, подсветка работает, проблем никаких не было, со всеми просьбами помогли, рекомендуем!</p></blockquote>
+          <figcaption><b>Ангелина Б.</b><span>февраль 2025 · 2ГИС</span></figcaption>
+        </figure>
+        <figure class="rev caustic" data-rv style="--i:1">
+          <blockquote><p>Бассейн с гейзером и водопад просто шикарный. Сервис на высшем уровне. Администрация прикладывает все силы для комфортного отдыха. Заходите, не пожалеете.</p></blockquote>
+          <figcaption><b>Роман О.</b><span>июль 2023 · 2ГИС</span></figcaption>
+        </figure>
+        <figure class="rev caustic" data-rv style="--i:2">
+          <blockquote><p>Постоянно ходим в эту сауну и больше ни в какую, всегда чисто, бассейн теплый и самое главное чистый, персонал вежливый, всем советую данную сауну.</p></blockquote>
+          <figcaption><b>Елена И.</b><span>ноябрь 2024 · 2ГИС</span></figcaption>
+        </figure>
+        <figure class="rev caustic" data-rv style="--i:0">
+          <blockquote><p>Классная сауна! На звонок ответили быстро, девушка которая нас встретила вежливая. В зале чисто, уютно, есть колонка, бассейн большой. Цены адекватные, и главное близко к дому. В общем мы остались довольны и теперь только к вам.</p></blockquote>
+          <figcaption><b>Алина А.</b><span>июнь 2025 · 2ГИС</span></figcaption>
+        </figure>
+        <figure class="rev caustic" data-rv style="--i:1">
+          <blockquote><p>Сауна отличная, все чистенько, парная хорошая — можно во весь рост лечь, бассейн теплый. Администратор очень вежливый, цена отличная, советую посетить эту сауну.</p></blockquote>
+          <figcaption><b>Дарья В.</b><span>апрель 2024 · 2ГИС</span></figcaption>
+        </figure>
+        <figure class="rev caustic" data-rv style="--i:2">
+          <blockquote><p>Отдыхали с подругами, уже не в первый раз. Очень понравилось! Чисто, уютно, бассейн теплый с джакузи, парная отличная.</p></blockquote>
+          <figcaption><b>Виктория П.</b><span>февраль 2024 · 2ГИС</span></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 8. Вопросы ===== -->
+  <section class="faq" id="faq" aria-labelledby="faq-title">
+    <div class="edge" aria-hidden="true"><svg viewBox="0 0 2880 120" preserveAspectRatio="none"><path fill="currentColor" d="M0 70c240 0 240-45 480-45s240 45 480 45 240-45 480-45 240 45 480 45 240-45 480-45 240 45 480 45V120H0Z"/></svg></div>
+    <div class="wrap faq-grid">
+      <div>
+        <h2 class="h2" id="faq-title" data-rv>Частые вопросы</h2>
+        <p class="note" data-rv style="--i:1">Не нашли ответ? Позвоните: <a href="tel:+74212358440">+7 4212 35-84-40</a> или <a href="tel:+79147723178">+7 914 772-31-78</a>.</p>
+      </div>
+      <div class="qa">
+        <details data-rv style="--i:0"><summary>Можно прийти со своей едой и напитками?</summary><p>Да, берите с собой всё, что любите.</p></details>
+        <details data-rv style="--i:1"><summary>Сколько человек поместится?</summary><p>До 10 человек. В цену часа уже входят 6 гостей. За каждого следующего — 200 ₽ за каждый час. Точную сумму на ваш состав и время подскажем по телефону.</p></details>
+        <details data-rv style="--i:2"><summary>Сколько стоит?</summary><p>В будни с 10:00 до 14:00 — 1500 ₽ в час. В будни с 14:00 до 10:00 утра и в субботу и воскресенье круглосуточно — 1800 ₽ в час.</p></details>
+        <details data-rv style="--i:3"><summary>Можно оплатить картой?</summary><p>Да, оплата картой есть.</p></details>
+        <details data-rv style="--i:4"><summary>Когда вы работаете?</summary><p>Круглосуточно, по предварительной записи. Позвоните и договоритесь о времени.</p></details>
+        <details data-rv style="--i:5"><summary>Как добраться?</summary><p>Хабаровск, Строительная ул., 9. Ближайшая остановка — «Марина», 330 метров пешком. <a href="https://yandex.ru/maps/org/rusalka/122112668871/" target="_blank" rel="noopener">Построить маршрут в Яндекс Картах</a>.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Подвал ===== -->
+  <div class="foot-wrap">
+    <div class="edge" aria-hidden="true"><svg viewBox="0 0 2880 120" preserveAspectRatio="none"><path fill="currentColor" d="M0 70c240 0 240-45 480-45s240 45 480 45 240-45 480-45 240 45 480 45 240-45 480-45 240 45 480 45V120H0Z"/></svg></div>
     <footer class="foot">
       <div class="wrap">
         <p class="foot-name" data-rv>Русалка зовёт вас в свой подводный мир</p>
@@ -981,14 +992,13 @@ h1,h2,h3{font-weight:500;margin:0}
         </div>
       </div>
     </footer>
-  </section>
+  </div>
 </main>
 
 <script>
 (function(){
   var doc = document.documentElement;
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
 
   /* Пузырьки */
   if (!reduce) document.querySelectorAll('[data-bubbles]').forEach(function(box){
